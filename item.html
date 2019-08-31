@@ -1,0 +1,61 @@
+<style>
+    .ctnr {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        /* key rule */
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        /*grid-template-areas: "header header"
+            "nav main"
+            "footer footer";*/
+    }
+
+    header {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+       /* grid-area: header;*/
+        background: turquoise;
+    }
+
+    nav {
+        grid-column: 1/2;
+        grid-row: 2/3;
+       /* grid-area: nav;*/
+        background: grey;
+       /* height: 60px;*/
+    }
+
+    main {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        /*grid-area: main;*/
+        background: orange;
+    }
+    
+    .title {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-self: start;
+        z-index: 1;
+    }
+
+    footer {
+        grid-column: 1/-1;
+       /* grid-area: footer;*/
+        background: yellow;
+    }
+
+    body {
+        margin: 0;
+    }
+
+</style>
+<div class="ctnr">
+    <header>header</header>
+    <nav>nav</nav>
+    <div class="title">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias?</h1>
+    </div>
+    <main>main</main>
+    <footer>footer</footer>
+</div>
